@@ -29,7 +29,7 @@ if (!empty($_POST)) {
 <head>
 	</style>
 	<link rel="shortcut icon" href="images/logoprojeto.png">
-	<title>Login Rede Social</title>
+	<title>Login Laurus Social</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 <!--===============================================================================================-->	
