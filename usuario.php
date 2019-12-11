@@ -1,14 +1,21 @@
+<?php 
+// primeiro comando da página quando se quer controlar o acesso a ela
+session_start();
+// se o usuário NÃO está logado
+if (!$_SESSION["logado"]){
+  // redireciona a navegação para a página login.php
+  header("location: login.php");
+  exit;
+}
+?>
 <!doctype html>
-<html lang="en" scrolling="no">
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="A front-end template that helps you build fast, modern mobile web apps.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
     <title>Rede Social</title>
-    <!-- Bootstrap core CSS/ feed -->
-  <link href="feed/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="feed/css/blog-home.css" rel="stylesheet">
 
     <!-- Add to homescreen for Chrome on Android -->
     <meta name="mobile-web-app-capable" content="yes">
@@ -46,12 +53,9 @@
     <div class="demo-layout mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header">
       <header class="demo-header mdl-layout__header mdl-color--grey-100 mdl-color-text--grey-600">
         <div class="mdl-layout__header-row">
-          <span class="mdl-layout-title">Página Inicial</span>
+          <span class="mdl-layout-title">Portifolio</span>
           <div class="mdl-layout-spacer"></div>
           <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable">
-            <label class="mdl-button mdl-js-button mdl-button--icon" for="search">
-              <i class="material-icons">search</i>
-            </label>
             <div class="mdl-textfield__expandable-holder">
               <input class="mdl-textfield__input" type="text" id="search">
               <label class="mdl-textfield__label" for="search">Enter your query...</label>
@@ -61,34 +65,8 @@
           
         </div>
       </header>
-      <div class="demo-drawer mdl-layout__drawer mdl-color--blue-grey-900 mdl-color-text--blue-grey-50">
-        <header class="demo-drawer-header">
-          <img src="images/duda.jpeg" class="demo-avatar">
-          <div class="demo-avatar-dropdown">
-            <span>DudaLima@hotmail.com</span>
-            <div class="mdl-layout-spacer"></div>
-            <button id="accbtn" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
-              <i class="material-icons" role="presentation">arrow_drop_down</i>
-              <span class="visuallyhidden">Contas</span>
-            </button>
-            <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="accbtn">
-              <li class="mdl-menu__item">Wanis.1000Enem@gmail.com</li>
-              <li class="mdl-menu__item">Nyailinha.Fisioterapeuta@hotmail.com</li>
-              <li class="mdl-menu__item">Laurao157@gmail.com</li>
-              <li class="mdl-menu__item"><i class="material-icons">add</i>Nova conta</li>
-            </ul>
-          </div>
-        </header>
-        <nav class="demo-navigation mdl-navigation mdl-color--blue-grey-800">
-          <a class="mdl-navigation__link" href="index.html"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">home</i>Página Inicial</a>
-          <a class="mdl-navigation__link" href="usuario.html"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">person</i>Perfil</a>
-          <a class="mdl-navigation__link" href="publicar.html"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">add</i>Publicar</a>
-          <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">arrow_upward</i>Novidades</a>
-          <a class="mdl-navigation__link" href="configuracoes.html"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">settings</i>Configurações</a>
-          <a class="mdl-navigation__link" href="login.html"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">exit_to_app</i>Sair</a>
-          <div class="mdl-layout-spacer"></div>
-          <a class="mdl-navigation__link" href="sobre.html"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">help_outline</i>Sobre</a>
-        </nav>
+      
+        <?php include("menu.php");?>
       </div>
       <main class="mdl-layout__content mdl-color--grey-100">
           <div class="mdl-grid demo-content">
@@ -104,40 +82,40 @@
 
         <!-- Blog Post -->
         <div class="card mb-4">
-          <img class="card-img-top" src="images/lauraPost.jpeg" alt="Card image cap">
+          <img class="card-img-top" src="portifolio/bra.png" alt="Card image cap">
           <div class="card-body">
-            <h2 class="card-title">#tbt</h2>
-            <p class="card-text">De um dia maravilhoso</p>
+            <h2 class="card-title">Bradesco</h2>
+            <p class="card-text">Site desenvolvido por Laurus Developer</p>
           </div>
           <div class="card-footer text-muted">
             Postado em 8 de dezembro de 2019 por 
-            <a href="#">Laura Dantas</a>
+            <a href="#">Laurus Developer</a>
           </div>
         </div>
 
         <!-- Blog Post -->
         <div class="card mb-4">
-          <img class="card-img-top" src="images/mariaPost.jpeg" alt="Card image cap">
+          <img class="card-img-top" src="portifolio/itau.png" alt="Card image cap">
           <div class="card-body">
-            <h2 class="card-title">De uns tempos atrás #aulanolaboratoriodeBIOLOGIA</h2>
-            <p class="card-text">Nem todos saberão admirar a sua beleza, então seja como o sol e brilhe mesmo sozinho </p>
-          </div>
-          <div class="card-footer text-muted">
-            Postado em 8 de dezembro de 2019 por 
-            <a href="#">Duarda Lima</a>
-          </div>
-        </div>
-
-        <!-- Blog Post -->
-        <div class="card mb-4">
-          <img class="card-img-top" src="images/wanisPost.jpeg" alt="Card image cap">
-          <div class="card-body">
-            <h2 class="card-title">Sorria, pelo menos vai sair linda na foto #meadmirem</h2>
-            <p class="card-text">Como desistir se ainda temos tantoobjetivos a concluir?</p>
+            <h2 class="card-title">Itaú</h2>
+            <p class="card-text">Site desenvolvido por Laurus Developer</p>
           </div>
           <div class="card-footer text-muted">
             Postado em 8 de dezembro de 2019 por
-            <a href="#">Garota Tumblr</a>
+            <a href="#">Laurus Developer</a>
+          </div>
+        </div>
+
+        <!-- Blog Post -->
+        <div class="card mb-4">
+          <img class="card-img-top" src="portifolio/tar.jpg" alt="Card image cap">
+          <div class="card-body">
+            <h2 class="card-title">Tárcisio Eletrodomesticos</h2>
+            <p class="card-text">Site desenvolvido por Laurus Developer</p>
+          </div>
+          <div class="card-footer text-muted">
+            Postado em 8 de dezembro de 2019 por
+            <a href="#">Laurus Developer</a>
           </div>
       </div>
     </div>
@@ -147,7 +125,6 @@
   <script src="feed/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
       </main>
     </div>
-
       <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" style="position: fixed; left: -1000px; height: -1000px;">
         <defs>
           <mask id="piemask" maskContentUnits="objectBoundingBox">
@@ -186,11 +163,11 @@
             </g>
             <g id="Layer_5">
               <polygon opacity="0.36" stroke-miterlimit="10" points="0,223.3 48,138.5 154.7,169 211,88.5
-              294.5,80.5 380,165.2 437,75.5 469.5,223.3 	"/>
+              294.5,80.5 380,165.2 437,75.5 469.5,223.3   "/>
             </g>
             <g id="Layer_4">
               <polygon stroke-miterlimit="10" points="469.3,222.7 1,222.7 48.7,166.7 155.7,188.3 212,132.7
-              296.7,128 380.7,184.3 436.7,125 	"/>
+              296.7,128 380.7,184.3 436.7,125   "/>
             </g>
           </g>
         </defs>

@@ -1,3 +1,13 @@
+<?php 
+// primeiro comando da página quando se quer controlar o acesso a ela
+session_start();
+// se o usuário NÃO está logado
+if (!$_SESSION["logado"]){
+  // redireciona a navegação para a página login.php
+  header("location: login.php");
+  exit;
+}
+?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -43,7 +53,7 @@
     <div class="demo-layout mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header">
       <header class="demo-header mdl-layout__header mdl-color--grey-100 mdl-color-text--grey-600">
         <div class="mdl-layout__header-row">
-          <span class="mdl-layout-title">Publicar</span>
+          <span class="mdl-layout-title">Feed Mundo</span>
           <div class="mdl-layout-spacer"></div>
           <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable">
             <div class="mdl-textfield__expandable-holder">
@@ -55,38 +65,65 @@
           
         </div>
       </header>
-      <div class="demo-drawer mdl-layout__drawer mdl-color--blue-grey-900 mdl-color-text--blue-grey-50">
-        <header class="demo-drawer-header">
-          <img src="images/duda.jpeg" class="demo-avatar">
-          <div class="demo-avatar-dropdown">
-            <span>DudaLima@hotmail.com</span>
-            <div class="mdl-layout-spacer"></div>
-            <button id="accbtn" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
-              <i class="material-icons" role="presentation">arrow_drop_down</i>
-              <span class="visuallyhidden">Contas</span>
-            </button>
-            <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="accbtn">
-              <li class="mdl-menu__item">Wanis.1000Enem@gmail.com</li>
-              <li class="mdl-menu__item">Nyailinha.Fisioterapeuta@hotmail.com</li>
-              <li class="mdl-menu__item">Laurao157@gmail.com</li>
-              <li class="mdl-menu__item"><i class="material-icons">add</i>Nova conta</li>
-            </ul>
-          </div>
-        </header>
-        <nav class="demo-navigation mdl-navigation mdl-color--blue-grey-800">
-          <a class="mdl-navigation__link" href="index.html"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">home</i>Página Inicial</a>
-          <a class="mdl-navigation__link" href="usuario.html"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">person</i>Perfil</a>
-          <a class="mdl-navigation__link" href="publicar.html"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">add</i>Publicar</a>
-          <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">arrow_upward</i>Novidades</a>
-          <a class="mdl-navigation__link" href="configuracoes.html"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">settings</i>Configurações</a>
-          <a class="mdl-navigation__link" href="login.html"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">exit_to_app</i>Sair</a>
-          <div class="mdl-layout-spacer"></div>
-          <a class="mdl-navigation__link" href="sobre.html"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">help_outline</i>Sobre</a>
-        </nav>
+      
+        <?php include("menu.php");?>
       </div>
       <main class="mdl-layout__content mdl-color--grey-100">
           <div class="mdl-grid demo-content">
-          
+          <div class="container">
+
+    <div class="row">
+
+      <!-- Blog Entries Column -->
+      <div class="col-md-8">
+
+       
+        </h1>
+
+        <!-- Blog Post -->
+        <div class="card mb-4">
+          <img class="card-img-top" src="portifolio/n1.jpg" alt="Card image cap">
+          <div class="card-body">
+            <h2 class="card-title">Ex-espião britânico e informante do FBI era amigo de Ivanka Trump, diz fonte
+</h2>
+            <p class="card-text">Um ex-espião britânico que foi informante do FBI na investigação da campanha presidencial do presidente dos Estados Unidos, Donald Trump, teve uma longa amizade com Ivanka Trump, filha do presidente, disse uma fonte familiarizada com o assunto na segunda-feira. </p>
+          </div>
+          <div class="card-footer text-muted">
+            Postado em 8 de dezembro de 2019 por 
+            <a href="#">Terra</a>
+          </div>
+        </div>
+
+        <!-- Blog Post -->
+        <div class="card mb-4">
+          <img class="card-img-top" src="portifolio/n2.jpg" alt="Card image cap">
+          <div class="card-body">
+            <h2 class="card-title">Presidente da Ucrânia classifica diálogo com Putin como "positivo"</h2>
+            <p class="card-text">O presidente da Ucrânia, Volodymyr Zelenskiy, disse nesta segunda-feira que foi "muito positivo" ter retomado o diálogo com o presidente da Rússia, Vladimir Putin, mas afirmou que muitas questões seguem sem solução após o encontro entre ambos.</p>
+          </div>
+          <div class="card-footer text-muted">
+            Postado em 8 de dezembro de 2019 por
+            <a href="#">Terra</a>
+          </div>
+        </div>
+
+        <!-- Blog Post -->
+        <div class="card mb-4">
+          <img class="card-img-top" src="portifolio/n3.jpg" alt="Card image cap">
+          <div class="card-body">
+            <h2 class="card-title">Papa condena corrupção e diz que ela 'degrada' as pessoas</h2>
+            <p class="card-text">Em uma publicação nas redes sociais, o papa Francisco afirmou nesta segunda-feira (9) que a corrupção é um "câncer" e que ela "degrada" a dignidade das pessoas.</p>
+          </div>
+          <div class="card-footer text-muted">
+            Postado em 8 de dezembro de 2019 por
+            <a href="#">Terra</a>
+          </div>
+      </div>
+    </div>
+  </div>
+  <!-- Bootstrap core JavaScript -->
+  <script src="feed/vendor/jquery/jquery.min.js"></script>
+  <script src="feed/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
       </main>
     </div>
       <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" style="position: fixed; left: -1000px; height: -1000px;">

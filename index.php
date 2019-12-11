@@ -1,3 +1,13 @@
+<?php 
+// primeiro comando da página quando se quer controlar o acesso a ela
+session_start();
+// se o usuário NÃO está logado
+if (!$_SESSION["logado"]){
+  // redireciona a navegação para a página login.php
+  header("location: login.php");
+  exit;
+}
+?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -6,22 +16,22 @@
     <meta name="description" content="A front-end template that helps you build fast, modern mobile web apps.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
     <title>Rede Social</title>
-
+    <!-- Bootstrap core CSS/ feed -->
+    <link href="feed/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="feed/css/blog-home.css" rel="stylesheet">
     <!-- Add to homescreen for Chrome on Android -->
     <meta name="mobile-web-app-capable" content="yes">
-    <link rel="icon" sizes="192x192" href="images/android-desktop.png">
-
+    <link rel="icon" sizes="192x192" href="images/logoprojeto.png">
     <!-- Add to homescreen for Safari on iOS -->
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="apple-mobile-web-app-title" content="Material Design Lite">
-    <link rel="apple-touch-icon-precomposed" href="images/ios-desktop.png">
-
+    <link rel="apple-touch-icon-precomposed" href="images/logoprojeto.png">
     <!-- Tile icon for Win8 (144x144 + tile color) -->
     <meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">
     <meta name="msapplication-TileColor" content="#3372DF">
 
-    <link rel="shortcut icon" href="images/favicon.png">
+    <link rel="shortcut icon" href="images/logoprojeto.png">
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
@@ -37,13 +47,17 @@
       margin-bottom: 40px;
       z-index: 900;
     }
+    body{
+      padding: 0;
+      margin: 0 auto;
+    }
     </style>
   </head>
   <body>
     <div class="demo-layout mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header">
       <header class="demo-header mdl-layout__header mdl-color--grey-100 mdl-color-text--grey-600">
         <div class="mdl-layout__header-row">
-          <span class="mdl-layout-title">Perfil</span>
+          <span class="mdl-layout-title">Página Inicial</span>
           <div class="mdl-layout-spacer"></div>
           <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable">
             <label class="mdl-button mdl-js-button mdl-button--icon" for="search">
@@ -58,24 +72,66 @@
           
         </div>
       </header>
-      <div class="demo-drawer mdl-layout__drawer mdl-color--blue-grey-900 mdl-color-text--blue-grey-50">
-        
-        <nav class="demo-navigation mdl-navigation mdl-color--blue-grey-800">
-          <a class="mdl-navigation__link" href="index.html"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">home</i>Página Inicial</a>
-          <a class="mdl-navigation__link" href="usuario.html"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">person</i>Perfil</a>
-          <a class="mdl-navigation__link" href="publicar.html"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">add</i>Publicar</a>
-          <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">arrow_upward</i>Novidades</a>
-          <a class="mdl-navigation__link" href="configuracoes.html"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">settings</i>Configurações</a>
-          <a class="mdl-navigation__link" href="login.html"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">exit_to_app</i>Sair</a>
-          <div class="mdl-layout-spacer"></div>
-          <a class="mdl-navigation__link" href="sobre.html"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">help_outline</i>Sobre</a>
-        </nav>
+        <?php include("menu.php");?>
       </div>
       <main class="mdl-layout__content mdl-color--grey-100">
           <div class="mdl-grid demo-content">
-          
+          <div class="container">
+
+    <div class="row">
+
+      <!-- Blog Entries Column -->
+      <div class="col-md-8">
+
+       
+        </h1>
+
+        <!-- Blog Post -->
+        <div class="card mb-4">
+          <img class="card-img-top" src="images/lauraPost.jpeg" alt="Card image cap">
+          <div class="card-body">
+            <h2 class="card-title">#tbt</h2>
+            <p class="card-text">De um dia maravilhoso</p>
+          </div>
+          <div class="card-footer text-muted">
+            Postado em 8 de dezembro de 2019 por 
+            <a href="#">Laura Dantas</a>
+          </div>
+        </div>
+
+        <!-- Blog Post -->
+        <div class="card mb-4">
+          <img class="card-img-top" src="images/mariaPost.jpeg" alt="Card image cap">
+          <div class="card-body">
+            <h2 class="card-title">De uns tempos atrás #aulanolaboratoriodeBIOLOGIA</h2>
+            <p class="card-text">Nem todos saberão admirar a sua beleza, então seja como o sol e brilhe mesmo sozinho </p>
+          </div>
+          <div class="card-footer text-muted">
+            Postado em 8 de dezembro de 2019 por 
+            <a href="#">Duarda Lima</a>
+          </div>
+        </div>
+
+        <!-- Blog Post -->
+        <div class="card mb-4">
+          <img class="card-img-top" src="images/wanisPost.jpeg" alt="Card image cap">
+          <div class="card-body">
+            <h2 class="card-title">Sorria, pelo menos vai sair linda na foto #meadmirem</h2>
+            <p class="card-text">Como desistir se ainda temos tantoobjetivos a concluir?</p>
+          </div>
+          <div class="card-footer text-muted">
+            Postado em 8 de dezembro de 2019 por
+            <a href="#">Garota Tumblr</a>
+          </div>
+      </div>
+    </div>
+  </div>
+  <!-- Bootstrap core JavaScript -->
+  <script src="feed/vendor/jquery/jquery.min.js"></script>
+  <script src="feed/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
       </main>
     </div>
+
       <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" style="position: fixed; left: -1000px; height: -1000px;">
         <defs>
           <mask id="piemask" maskContentUnits="objectBoundingBox">

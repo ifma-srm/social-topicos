@@ -1,3 +1,13 @@
+<?php 
+// primeiro comando da página quando se quer controlar o acesso a ela
+session_start();
+// se o usuário NÃO está logado
+if (!$_SESSION["logado"]){
+  // redireciona a navegação para a página login.php
+  header("location: login.php");
+  exit;
+}
+?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -85,7 +95,7 @@
         <footer class="demo-footer mdl-mini-footer">
           <div class="mdl-mini-footer--left-section">
             <ul class="mdl-mini-footer--link-list">
-              <li><a href="index.html">Página Principal</a></li>
+              <li><a href="index.php">Página Principal</a></li>
               <li><a href="#">Ajuda</a></li>
               <li><a href="#">Privacidade e Termos</a></li>
               <li><a href="#">Termo de acordo com o usuário</a></li>

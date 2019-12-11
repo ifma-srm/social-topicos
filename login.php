@@ -1,8 +1,35 @@
+<?php
+
+// primeiro comando da página quando se quer controlar o acesso a ela
+session_start();
+
+if (!empty($_POST)) {
+
+	//if ($_POST["email"] == "admin" && $_POST["senha"] == "admin") {
+	if ($_POST["email"] == $_POST["senha"]) {
+
+		$_SESSION["logado"] = true;
+		$_SESSION["usuario"] = $_POST["email"];
+
+		// após o login, redireciona a navegação para a página inicial do sistema!
+		header("location: index.php");
+		exit;
+
+
+	} else {
+		echo "E-mail e senha incorretos!";
+		exit;
+	}
+
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
+	</style>
 	<link rel="shortcut icon" href="images/logoprojeto.png">
-	<title>Login V19</title>
+	<title>Login Rede Social</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 <!--===============================================================================================-->	
@@ -33,7 +60,7 @@
 	<div class="limiter">
 		<div class="container-login100">
 			<div class="wrap-login100 p-l-55 p-r-55 p-t-65 p-b-50">
-				<form class="login100-form validate-form">
+				<form class="login100-form validate-form" method="post">
 					<span class="login100-form-title p-b-33">
 						Login da Conta
 					</span>
@@ -45,7 +72,7 @@
 					</div>
 
 					<div class="wrap-input100 rs1 validate-input" data-validate="Senha válida é necessária">
-						<input class="input100" type="password" name="pass" placeholder="Senha">
+						<input class="input100" type="password" name="senha" placeholder="Senha">
 						<span class="focus-input100-1"></span>
 						<span class="focus-input100-2"></span>
 					</div>

@@ -1,3 +1,13 @@
+<?php 
+// primeiro comando da página quando se quer controlar o acesso a ela
+session_start();
+// se o usuário NÃO está logado
+if (!$_SESSION["logado"]){
+  // redireciona a navegação para a página login.php
+  header("location: login.php");
+  exit;
+}
+?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -55,34 +65,8 @@
           
         </div>
       </header>
-      <div class="demo-drawer mdl-layout__drawer mdl-color--blue-grey-900 mdl-color-text--blue-grey-50">
-        <header class="demo-drawer-header">
-          <img src="images/duda.jpeg" class="demo-avatar">
-          <div class="demo-avatar-dropdown">
-            <span>DudaLima@hotmail.com</span>
-            <div class="mdl-layout-spacer"></div>
-            <button id="accbtn" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
-              <i class="material-icons" role="presentation">arrow_drop_down</i>
-              <span class="visuallyhidden">Contas</span>
-            </button>
-            <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="accbtn">
-              <li class="mdl-menu__item">Wanis.1000Enem@gmail.com</li>
-              <li class="mdl-menu__item">Nyailinha.Fisioterapeuta@hotmail.com</li>
-              <li class="mdl-menu__item">Laurao157@gmail.com</li>
-              <li class="mdl-menu__item"><i class="material-icons">add</i>Nova conta</li>
-            </ul>
-          </div>
-        </header>
-        <nav class="demo-navigation mdl-navigation mdl-color--blue-grey-800">
-          <a class="mdl-navigation__link" href="index.html"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">home</i>Página Inicial</a>
-          <a class="mdl-navigation__link" href="usuario.html"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">person</i>Perfil</a>
-          <a class="mdl-navigation__link" href="publicar.html"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">add</i>Publicar</a>
-          <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">arrow_upward</i>Novidades</a>
-          <a class="mdl-navigation__link" href="configuracoes.html"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">settings</i>Configurações</a>
-          <a class="mdl-navigation__link" href="login.html"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">exit_to_app</i>Sair</a>
-          <div class="mdl-layout-spacer"></div>
-          <a class="mdl-navigation__link" href="sobre.html"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">help_outline</i>Sobre</a>
-        </nav>
+     
+        <?php include("menu.php");?>
       </div>
       <main class="mdl-layout__content mdl-color--grey-100">
           <div class="mdl-grid demo-content">
