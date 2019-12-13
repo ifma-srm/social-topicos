@@ -92,6 +92,8 @@ if (!$_SESSION["logado"]){
           <div class="card-body">
             <h2 class="card-title">#tbt</h2>
             <p class="card-text">De um dia maravilhoso</p>
+               &nbsp;&nbsp;&nbsp;&nbsp;<a class="mdl-navigation__link" href="#"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">comment</i>&nbsp;Comentar</a>
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="mdl-navigation__link" href="#"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">thumb_up_alt</i>&nbsp;Curtir</a>
           </div>
           <div class="card-footer text-muted">
             Postado em 8 de dezembro de 2019 por 
@@ -105,6 +107,8 @@ if (!$_SESSION["logado"]){
           <div class="card-body">
             <h2 class="card-title">De uns tempos atrás #aulanolaboratoriodeBIOLOGIA</h2>
             <p class="card-text">Nem todos saberão admirar a sua beleza, então seja como o sol e brilhe mesmo sozinho </p>
+            &nbsp;&nbsp;&nbsp;&nbsp;<a class="mdl-navigation__link" href="#"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">comment</i>&nbsp;Comentar</a>
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="mdl-navigation__link" href="#"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">thumb_up_alt</i>&nbsp;Curtir</a>
           </div>
           <div class="card-footer text-muted">
             Postado em 8 de dezembro de 2019 por 
@@ -118,6 +122,8 @@ if (!$_SESSION["logado"]){
           <div class="card-body">
             <h2 class="card-title">Sorria, pelo menos vai sair linda na foto #meadmirem</h2>
             <p class="card-text">Como desistir se ainda temos tantoobjetivos a concluir?</p>
+            &nbsp;&nbsp;&nbsp;&nbsp;<a class="mdl-navigation__link" href="#"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">comment</i>&nbsp;Comentar</a>
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="mdl-navigation__link" href="#"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">thumb_up_alt</i>&nbsp;Curtir</a>
           </div>
           <div class="card-footer text-muted">
             Postado em 8 de dezembro de 2019 por

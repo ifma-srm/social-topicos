@@ -11,6 +11,9 @@ if (!$_SESSION["logado"]){
 <!doctype html>
 <html lang="en">
   <head>
+    <link href="feed/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="feed/css/blog-home.css" rel="stylesheet">
+
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="A front-end template that helps you build fast, modern mobile web apps.">
@@ -46,6 +49,10 @@ if (!$_SESSION["logado"]){
       margin-right: 40px;
       margin-bottom: 40px;
       z-index: 900;
+    }
+    body{
+      padding: 0;
+      margin: 0 auto;
     }
     </style>
   </head>
@@ -87,6 +94,8 @@ if (!$_SESSION["logado"]){
             <h2 class="card-title">Ex-espião britânico e informante do FBI era amigo de Ivanka Trump, diz fonte
 </h2>
             <p class="card-text">Um ex-espião britânico que foi informante do FBI na investigação da campanha presidencial do presidente dos Estados Unidos, Donald Trump, teve uma longa amizade com Ivanka Trump, filha do presidente, disse uma fonte familiarizada com o assunto na segunda-feira. </p>
+            &nbsp;&nbsp;&nbsp;&nbsp;<a class="mdl-navigation__link" href="#"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">comment</i>&nbsp;Comentar</a>
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="mdl-navigation__link" href="#"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">thumb_up_alt</i>&nbsp;Curtir</a>
           </div>
           <div class="card-footer text-muted">
             Postado em 8 de dezembro de 2019 por 
@@ -100,6 +109,8 @@ if (!$_SESSION["logado"]){
           <div class="card-body">
             <h2 class="card-title">Presidente da Ucrânia classifica diálogo com Putin como "positivo"</h2>
             <p class="card-text">O presidente da Ucrânia, Volodymyr Zelenskiy, disse nesta segunda-feira que foi "muito positivo" ter retomado o diálogo com o presidente da Rússia, Vladimir Putin, mas afirmou que muitas questões seguem sem solução após o encontro entre ambos.</p>
+            &nbsp;&nbsp;&nbsp;&nbsp;<a class="mdl-navigation__link" href="#"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">comment</i>&nbsp;Comentar</a>
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="mdl-navigation__link" href="#"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">thumb_up_alt</i>&nbsp;Curtir</a>
           </div>
           <div class="card-footer text-muted">
             Postado em 8 de dezembro de 2019 por
@@ -113,6 +124,8 @@ if (!$_SESSION["logado"]){
           <div class="card-body">
             <h2 class="card-title">Papa condena corrupção e diz que ela 'degrada' as pessoas</h2>
             <p class="card-text">Em uma publicação nas redes sociais, o papa Francisco afirmou nesta segunda-feira (9) que a corrupção é um "câncer" e que ela "degrada" a dignidade das pessoas.</p>
+            &nbsp;&nbsp;&nbsp;&nbsp;<a class="mdl-navigation__link" href="#"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">comment</i>&nbsp;Comentar</a>
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="mdl-navigation__link" href="#"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">thumb_up_alt</i>&nbsp;Curtir</a>
           </div>
           <div class="card-footer text-muted">
             Postado em 8 de dezembro de 2019 por

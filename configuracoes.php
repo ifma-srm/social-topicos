@@ -70,7 +70,20 @@ if (!$_SESSION["logado"]){
       </div>
       <main class="mdl-layout__content mdl-color--grey-100">
           <div class="mdl-grid demo-content">
-          
+          <table>
+            <tr>
+              <td><button class="mdl-button mdl-js-button">Editar dados do usuário</button></td>
+            </tr>
+            <tr>
+              <td><button class="mdl-button mdl-js-button">Mandar Feedback</button></td>
+            </tr>
+            <tr>
+              <td><button class="mdl-button mdl-js-button">Editar fontes avançadas</button></td>
+            </tr>
+            <tr>
+              <td><button class="mdl-button mdl-js-button mdl-button--accent">Apagar conta</button></td>
+            </tr>
+          </table>
       </main>
     </div>
       <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" style="position: fixed; left: -1000px; height: -1000px;">

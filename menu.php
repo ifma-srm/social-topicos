@@ -6,6 +6,7 @@
         </header>
         <nav class="demo-navigation mdl-navigation mdl-color--blue-grey-800">
           <a class="mdl-navigation__link" href="index.php"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">home</i>Página Inicial</a>
+          <a class="mdl-navigation__link" href="perfil.php"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">person</i>Perfil</a>
           <a class="mdl-navigation__link" href="portfolio.php"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">collections</i>Portifolio</a>
           <a class="mdl-navigation__link" href="publicar.php"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">add</i>Publicar</a>
           <a class="mdl-navigation__link" href="novidades.php"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">arrow_upward</i>Novidades</a>
